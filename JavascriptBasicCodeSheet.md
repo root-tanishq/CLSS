@@ -396,3 +396,19 @@ console.log(newNumber);
 - Bit Mask `1 << i`
 - Operation `OR`
 ---
+## Hoisting
+
+- Hoisting is a behavior in JavaScript where variable and function declarations are moved to the top of their containing scope during the compilation phase. This means that you can use a variable or call a function before they are actually declared in your code. However, it's important to note that only the declarations are hoisted, not the initializations.
+
+Here's an example of hoisting in JavaScript:
+
+```javascript
+console.log(myVariable); // Output: undefined
+var myVariable = 10;
+
+myFunction(); // Output: "Hello, hoisting!"
+function myFunction() {
+    console.log("Hello, hoisting!");
+}
+```
+Note => While declarations are hoisted, variable assignments are not. This can sometimes lead to unexpected behavior, so it's a good practice to declare variables before using them to avoid confusion.
